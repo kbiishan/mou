@@ -1,0 +1,121 @@
+/* google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 70px;
+    padding: 30px 50px;
+}
+
+nav .logo a {
+    font-size: 35px;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+nav .logo a span {
+    color: crimson;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #ffff;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(360deg, #121212 0%, rgba(18, 18, 18, 0) 100%), url(image/bg.jpg) no-repeat center;
+    background-image: center;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar img {
+    width: 15.625rem;
+    height: 15.625rem;
+    object-fit: cover;
+    clip-path: polygon(85% 6%, 70% 15%, 30% 15%, 15% 5%, 0% 25%, 10% 45%, 10% 75%, 25% 90%, 40% 95%, 60% 95%, 75% 91%, 90% 75%, 90% 45%, 100% 25%);
+    border-radius: 50%;
+}
+
+.avatar h1 {
+    color: white;
+    margin-top: 12px;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.avatar p {
+    margin-top: 12px;
+    color: white;
+    font-weight: 300;
+}
+
+.menu-btn i {
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#click {
+    display: none;
+}
+
+.menu-btn i {
+    display: none;
+}
+
+@media screen and (max-width:580px) {
+    .menu-btn i {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        z-index: 1;
+        top: 100px;
+        left: 100%;
+        width: 100%;
+        height: 100vh;
+        /* background: rgba(255, 255, 255, 0.2); */
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        transition: 0.3s ease-in-out;
+        /* justify-content: center; */
+    }
+
+    #click:checked~ul {
+        left: 0%;
+    }
+    #click:checked ~ .menu-btn i::before{
+        content: '\f00d';
+    }
+    .avatar{
+        margin-top: 30%;
+    }   
+}
