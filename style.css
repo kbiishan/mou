@@ -42,7 +42,7 @@ nav ul li a {
 body {
     height: 100vh;
     width: 100%;
-    background: linear-gradient(360deg, #121212 0%, rgba(18, 18, 18, 0) 100%), url(image/bg.jpg) no-repeat center;
+    background: linear-gradient(360deg, #121212 0%, rgba(18, 18, 18, 0) 100%), url(bg.jpg) no-repeat center;
     background-image: center;
 }
 
